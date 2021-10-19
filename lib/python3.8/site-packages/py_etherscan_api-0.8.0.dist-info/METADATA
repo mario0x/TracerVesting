@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: py-etherscan-api
+Version: 0.8.0
+Summary: Python Bindings to Etherscan.io API
+Home-page: https://github.com/corpetty/py-etherscan-api
+Author: coreypetty
+Author-email: petty.btc@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
+

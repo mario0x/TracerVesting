@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vesting Tracker | MakerDAO</title>
+    <link rel="icon" href="static/images/tracer_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<main id="app">
+    <div class="max-w-screen-xl mx-auto px-4">
+        <div style="font-family: 'Inter', sans-serif;" class="font-title text-4xl md:text-5xl lg:text-6xl text-center pt-20 pb-20 uppercase">
+            <div style="margin-top: 5%;"><b>TracerDAO Vesting Tracker <br></div>
+            <div class="md:text-3xl text-center pt-10 pb-2">
+                This dashboard tracks the vesting schedule of TracerDAO governors<br> Experimental dashboard, data might not me accurate. <br>
+            </div>
+            <hr style="border: 2px solid black;">
+            <form method="POST">
+                <input class="rounded" name="contract" placeholder="Vesting Contract (Address)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px; margin-top: 7px; margin-bottom: 2px;" type="text">
+                <br>
+                <input class="rounded" name="ethaddy" placeholder="Ethereum Account (Address)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px; margin-bottom: 2px;" type="text">
+                <br>
+                <input class="rounded" name="schedule" placeholder="Governor Schedule (Number)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px;" type="text">
+                <br>
+                <input class="rounded hover" id="submitBtn" name="submitBtn" style="border: 3px solid black; width: 300px; font-size: 20px; padding-top: 15px; padding-bottom: 15px;" type="submit">
+            </form>
+        </div>
+        
+    </div>
+
+</main>
+
+</body>
