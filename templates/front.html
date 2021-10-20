@@ -24,12 +24,15 @@
             </div>
             <hr style="border: 2px solid black;">
             <form method="POST">
-                <input class="rounded" name="contract" placeholder="Vesting Contract (Address)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px; margin-top: 7px; margin-bottom: 2px;" type="text">
-                <br>
+                <!-- <input class="rounded" name="contract" placeholder="Vesting Contract (Address)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px; margin-top: 7px; margin-bottom: 2px;" type="text"> -->
+                <!-- <br> -->
                 <input class="rounded" name="ethaddy" placeholder="Ethereum Account (Address)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px; margin-bottom: 2px;" type="text">
                 <br>
-                <input class="rounded" name="schedule" placeholder="Governor Schedule (Number)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px;" type="text">
-                <br>
+                {% if no_vesting %}
+                    <p class="error">Did not find vesting schedule for this address</p>
+                {% endif %}
+                <!-- <input class="rounded" name="schedule" placeholder="Governor Schedule (Number)" style="border: 3px solid black; width: 600px; padding: 20px; font-size: 20px;" type="text">
+                <br> -->
                 <input class="rounded hover" id="submitBtn" name="submitBtn" style="border: 3px solid black; width: 300px; font-size: 20px; padding-top: 15px; padding-bottom: 15px;" type="submit">
             </form>
         </div>
