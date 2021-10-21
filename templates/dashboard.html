@@ -24,7 +24,7 @@
             </div>
             <br><hr style="border: 2px solid black;">
         </div>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-3 mt-8">
+        <div class="grid grid-cols-1 gap-6 {{'md:grid-cols-3' if complex_vesting else 'md:grid-cols-2' }} mt-8">
             <div class="max-w-screen-xl mx-autow-full">
                 <div class="">
                     <div
@@ -52,58 +52,60 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-screen-xl mx-auto w-full">
-                <div class="">
-                    <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
-                        <div class="flex">
-                            <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
-                                class="font-medium text-3xl lg:text-4xl mb-2">Cliff Claimed?</span>
-                        </div>
-                        <div class=" text-4xl lg:text-5xl mb-2">
-                            {{ cliff_claimed }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="max-w-screen-xl mx-auto w-full">
-                <div class="">
-                    <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
-                        <div class="flex">
-                            <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
-                                class="font-medium text-3xl lg:text-4xl mb-2">Start Time</span>
-                        </div>
-                        <div class=" text-4xl lg:text-5xl mb-2">
-                            {{ start_time }}
+            {% if complex_vesting %}
+                <div class="max-w-screen-xl mx-auto w-full">
+                    <div class="">
+                        <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
+                            <div class="flex">
+                                <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
+                                    class="font-medium text-3xl lg:text-4xl mb-2">Cliff Claimed?</span>
+                            </div>
+                            <div class=" text-4xl lg:text-5xl mb-2">
+                                {{ cliff_claimed }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="max-w-screen-xl mx-auto w-full">
-                <div class="">
-                    <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
-                        <div class="flex">
-                            <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
-                                class="font-medium text-3xl lg:text-4xl mb-2">Cliff Time</span>
-                        </div>
-                        <div class=" text-4xl lg:text-5xl mb-2">
-                            {{ cliff_time }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="max-w-screen-xl mx-auto w-full">
-                <div class="">
-                    <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
-                        <div class="flex">
-                            <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
-                                class="font-medium text-3xl lg:text-4xl mb-2">End Time</span>
-                        </div>
-                        <div class=" text-4xl lg:text-5xl mb-2">
-                            {{ end_time }}
+                <div class="max-w-screen-xl mx-auto w-full">
+                    <div class="">
+                        <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
+                            <div class="flex">
+                                <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
+                                    class="font-medium text-3xl lg:text-4xl mb-2">Start Time</span>
+                            </div>
+                            <div class=" text-4xl lg:text-5xl mb-2">
+                                {{ start_time }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="max-w-screen-xl mx-auto w-full">
+                    <div class="">
+                        <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
+                            <div class="flex">
+                                <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
+                                    class="font-medium text-3xl lg:text-4xl mb-2">Cliff Time</span>
+                            </div>
+                            <div class=" text-4xl lg:text-5xl mb-2">
+                                {{ cliff_time }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-screen-xl mx-auto w-full">
+                    <div class="">
+                        <div class="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 relative" style="border: 4px solid black;">
+                            <div class="flex">
+                                <img class="black-border w-auto logo mr-6 rounded" src="static/images/tracer_logo.png" alt="Logo"/> <span
+                                    class="font-medium text-3xl lg:text-4xl mb-2">End Time</span>
+                            </div>
+                            <div class=" text-4xl lg:text-5xl mb-2">
+                                {{ end_time }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
         <div class="mt-8 mb-12">
             <div
